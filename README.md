@@ -11,7 +11,7 @@ This is a practice project for recreating a KFC Landing Page with the help of a 
 
 
 ## Images
-Finsihed View
+Finished View
 
 <img src="https://github.com/liambrewster/KFC_Landing_page/blob/main/images/Screenshot.png">
 
