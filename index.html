@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>KFC Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section class="main">
         <header>
@@ -21,7 +23,9 @@
         <div class="content">
             <div class="text">
                 <h2>Its Finger<br> Lickin <span>Good</span></h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto saepe ratione cupiditate, error esse aliquam ipsum quas quos molestias optio fugiat veritatis ullam, numquam possimus quae nesciunt distinctio deleniti aperiam qui soluta nihil sit nulla.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto saepe ratione cupiditate, error esse
+                    aliquam ipsum quas quos molestias optio fugiat veritatis ullam, numquam possimus quae nesciunt
+                    distinctio deleniti aperiam qui soluta nihil sit nulla.</p>
                 <a href="#" class="btn">Order Now</a>
             </div>
             <div class="slider">
@@ -42,14 +46,24 @@
 
         <div class="footer">
             <div class="sci">
-                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+                <li><a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
             </div>
             <div class="prevNext">
                 <p>Always Fresh</p>
-                <span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
-                <span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+                <span class="prev">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                </span>
+                <span class="next">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
             </div>
         </div>
     </section>
@@ -57,5 +71,42 @@
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+        i = 0;
+
+        function activeSlide(n) {
+            for (slide of slides)
+                slide.classList.remove('active');
+            slides[n].classList.add('active');
+        }
+
+        //Next function
+        next.addEventListener('click', function () {
+            if (i == slides.length - 1) {
+                i = 0;
+                activeSlide(i)
+            } else {
+                i++;
+                activeSlide(i)
+            }
+        })
+        //Prev function
+        prev.addEventListener('click', function () {
+            if (i == 0) {
+                i = slides.length - 1;
+                activeSlide(i)
+            } else {
+                i--;
+                activeSlide(i)
+            }
+        })
+
+    </script>
 </body>
+
 </html>
