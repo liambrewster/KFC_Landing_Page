@@ -278,3 +278,25 @@ color: #fff;
         transform: translateY(0px) rotate(-45deg);
     }
 }
+
+@media (max-width:480px){
+    header,.main{
+        padding: 20px;
+    }
+    .toggle.active{
+        right: 20px;
+    }
+    .content .text h2 {
+        font-size:3em;
+    }
+    .btn {
+        padding:15px 30px ;
+    }
+    .footer{
+       flex-direction: column-reverse;
+       align-items: center; 
+    }
+    .sci{
+        margin-top: 40px;
+    }
+}
